@@ -1,0 +1,153 @@
+﻿@Model Conditio.Models.ComparatorViewModel
+
+@{
+    ViewData["Title"] = "Comparator";
+
+    var results = ViewData["result"];
+
+    bool showresults = results == null ? false : (bool)results;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="home-title">Compare terms on demand</h2>
+    </div>
+    <div class="col-md-12">
+        <h5>Choose any platform</h5>
+        <form asp-controller="Analysis" asp-action="Compare" method="post">
+            <div class="form-group col-md-4 mx-2">
+                @Html.TextBox("url_one", "", new { @class = "form-control" })
+            </div>
+            <div class="form-group col-md-4 mx-2">
+                @Html.TextBox("url_two", "", new { @class = "form-control" })
+            </div>
+            <div class="form-group col-md-4 mx-2">
+                @Html.TextBox("url_three", "", new { @class = "form-control" })
+            </div>
+            <div class="form-group col-md-12">
+                <button type="submit" class="btn btn-primary">Compare</button>
+            </div>
+        </form>
+    </div>
+
+    @if (showresults)
+    {
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">Price</h4>
+                    @foreach (var item in Model.Price)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">Delivery</h4>
+                    @foreach (var item in Model.Delivery)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">Refund</h4>
+                    @foreach (var item in Model.Refund)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">Cancelation</h4>
+                    @foreach (var item in Model.Cancelation)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">Guarantee</h4>
+                    @foreach (var item in Model.Guarantee)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">Jurisdiction</h4>
+                    @foreach (var item in Model.Jurisdiction)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">ApplicableLaw</h4>
+                    @foreach (var item in Model.ApplicableLaw)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">Responsibility</h4>
+                    @foreach (var item in Model.Responsibility)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">CookiesPolicy</h4>
+                    @foreach (var item in Model.CookiesPolicy)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="comparator-details-header">DataProtection</h4>
+                    @foreach (var item in Model.DataProtection)
+                    {
+                        <div>
+                            <p class="comparator-details-key">@item.Key</p>
+                            <p class="comparator-details-value">@item.Value</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
