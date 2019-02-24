@@ -30,6 +30,23 @@
         </form>
     </div>
 
+    @functions {
+    public string GetUrl(string key)
+    {
+        switch (key)
+        {
+            case "Amazon":
+                return "https://amazon.es";
+            case "Asos":
+                return "https://asos.com";
+            case "Pccomponentes":
+                return "https://pccomponentes.com";
+            default:
+                return "#";
+        }
+    }
+    }
+
     @if (showresults)
     {
         <div class="col-md-12">
@@ -39,9 +56,9 @@
                         <h4 class="comparator-details-header">Precio</h4>
                         @foreach (var item in Model.Price)
                         {
-                            <div>
-                                <p class="comparator-details-key">@item.Key</p>
-                                <p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p>
+                            <div class="row">
+                                <div class="col-md-6 text-left"><p class="comparator-details-key"><a href="@GetUrl(item.Key)">@item.Key</a></p></div>
+                                <div class="col-md-6 text-right"><p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p></div>
                             </div>
                         }
                     </div>
@@ -51,9 +68,9 @@
                         <h4 class="comparator-details-header">Entrega</h4>
                         @foreach (var item in Model.Delivery)
                         {
-                            <div>
-                                <p class="comparator-details-key">@item.Key</p>
-                                <p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p>
+                            <div class="row">
+                                <div class="col-md-6 text-left"><p class="comparator-details-key"><a href="@GetUrl(item.Key)">@item.Key</a></p></div>
+                                <div class="col-md-6 text-right"><p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p></div>
                             </div>
                         }
                     </div>
@@ -63,9 +80,9 @@
                         <h4 class="comparator-details-header">Devolución</h4>
                         @foreach (var item in Model.Refund)
                         {
-                            <div>
-                                <p class="comparator-details-key">@item.Key</p>
-                                <p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p>
+                            <div class="row">
+                                <div class="col-md-6 text-left"><p class="comparator-details-key"><a href="@GetUrl(item.Key)">@item.Key</a></p></div>
+                                <div class="col-md-6 text-right"><p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p></div>
                             </div>
                         }
                     </div>
@@ -79,9 +96,9 @@
                         <h4 class="comparator-details-header">Cancelación</h4>
                         @foreach (var item in Model.Cancelation)
                         {
-                            <div>
-                                <p class="comparator-details-key">@item.Key</p>
-                                <p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p>
+                            <div class="row">
+                                <div class="col-md-6 text-left"><p class="comparator-details-key"><a href="@GetUrl(item.Key)">@item.Key</a></p></div>
+                                <div class="col-md-6 text-right"><p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p></div>
                             </div>
                         }
                     </div>
@@ -91,9 +108,9 @@
                         <h4 class="comparator-details-header">Garantia</h4>
                         @foreach (var item in Model.Guarantee)
                         {
-                            <div>
-                                <p class="comparator-details-key">@item.Key</p>
-                                <p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p>
+                            <div class="row">
+                                <div class="col-md-6 text-left"><p class="comparator-details-key"><a href="@GetUrl(item.Key)">@item.Key</a></p></div>
+                                <div class="col-md-6 text-right"><p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p></div>
                             </div>
                         }
                     </div>
@@ -103,9 +120,9 @@
                         <h4 class="comparator-details-header">Jurisdiccion</h4>
                         @foreach (var item in Model.Jurisdiction)
                         {
-                            <div>
-                                <p class="comparator-details-key">@item.Key</p>
-                                <p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p>
+                            <div class="row">
+                                <div class="col-md-6 text-left"><p class="comparator-details-key"><a href="@GetUrl(item.Key)">@item.Key</a></p></div>
+                                <div class="col-md-6 text-right"><p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p></div>
                             </div>
                         }
                     </div>
@@ -119,9 +136,9 @@
                         <h4 class="comparator-details-header">Proteccion de datos</h4>
                         @foreach (var item in Model.DataProtection)
                         {
-                            <div>
-                                <p class="comparator-details-key">@item.Key</p>
-                                <p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p>
+                            <div class="row">
+                                <div class="col-md-6 text-left"><p class="comparator-details-key"><a href="@GetUrl(item.Key)">@item.Key</a></p></div>
+                                <div class="col-md-6 text-right"><p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p></div>
                             </div>
                         }
                     </div>
@@ -131,9 +148,9 @@
                         <h4 class="comparator-details-header">Responsabilidad</h4>
                         @foreach (var item in Model.Responsibility)
                         {
-                            <div>
-                                <p class="comparator-details-key">@item.Key</p>
-                                <p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p>
+                            <div class="row">
+                                <div class="col-md-6 text-left"><p class="comparator-details-key"><a href="@GetUrl(item.Key)">@item.Key</a></p></div>
+                                <div class="col-md-6 text-right"><p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p></div>
                             </div>
                         }
                     </div>
@@ -143,9 +160,9 @@
                         <h4 class="comparator-details-header">Politica de cookies</h4>
                         @foreach (var item in Model.CookiesPolicy)
                         {
-                            <div>
-                                <p class="comparator-details-key">@item.Key</p>
-                                <p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p>
+                            <div class="row">
+                                <div class="col-md-6 text-left"><p class="comparator-details-key"><a href="@GetUrl(item.Key)">@item.Key</a></p></div>
+                                <div class="col-md-6 text-right"><p class="comparator-details-value comparator-details-value-@item.Value">@item.Value</p></div>
                             </div>
                         }
                     </div>
