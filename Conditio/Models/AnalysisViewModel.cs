@@ -21,22 +21,22 @@ namespace Conditio.Models
                         Key = "General",
                         Name = "General",
                         Price = new KeyValuePair<string, int>(
-                            "Los precios y condiciones de venta tienen un carácter meramente informativo y pueden ser modificados en atención a las fluctuaciones del mercado.Una vez formalizado el pedido no podrán ser modificados sin el expreso acuerdo de ambos contratantes. Formas de pago: tarjeta, transferencia o ingreso en cuenta, financiación, contrareembolso, en metálico o con tarjeta en Tienda, Google Pay",
+                            "Formas de pago: tarjeta, transferencia, financiación, contrareembolso, en metálico o con tarjeta",
                             2),
                         Delivery = new KeyValuePair<string, int>(
-                            "Entre 24 horas y 72 horas. Dependerá de la disponibilidad de cada producto. Si hay varios productos, se hará un único envío. El cliente dispondrá de 72 horas para comprobar el pedido. Si el producto está dañado es recomendable contactar en las primeras 24 horas. Gastos de envíos variable: visita nuestra calculadora de gastos de envío .",
+                            "Entre 24 horas y 72 horas",
                             1),
                         Refund = new KeyValuePair<string, int>(
-                            "Te devolveremos el dinero según la forma de pago que hayas utilizado. Toda mercancía debe ser devuelta en su embalaje sin abrir y condiciones originales. Tras rellenar el formulario de desistimiento, deberás enviar los bienes en un plazo máximo de 14 días. Los gastos de transportes originados por la devolución correrán a tu cargo.",
+                            "Plazo máximo de 14 días",
                             2),
                         Cancelation = new KeyValuePair<string, int>(
-                            "Desistimiento 14 días naturales desde la recepción sin necesidad de justificar. En la cancelación de pedidos que impliquen  una devolución, ésta podrá tardar hasta 30 días.",
+                            "30 días",
                             1),
                         Guarantee = new KeyValuePair<string, int>(
-                            "Con carácter general, el plazo de garantía es 2 años desde el momento de la compra. Posibilidad de garantía extendida. La garantía no cubre defectos provocados por desgaste y/o manipulación del mismo por parte del cliente. PCCOMPONENTES, hará el cambio de su producto por uno idéntico o similar en prestaciones o procederá a su reparación tras la valoración del SAT oficial, Cuando el cambio no sea posible por uno igual, se realizará el cambio por similar en prestaciones/precio",
+                            "2 años desde el momento de la compra",
                             1),
                         Jurisdiction = new KeyValuePair<string, int>(
-                            "La relación entre PCCOMPONENTES y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y Tribunales españolesResolución de litigios en línea en materia de consumo conforme al Art. 14.1 del Reglamento (UE) 524/2013:",
+                            "Normativa española vigente. Cualquier controversia se someterá a los Juzgados y Tribunales españoles",
                             1),
                         ApplicableLaw = new KeyValuePair<string, int>(
                             "TRLGDCU, LSSI",
@@ -45,10 +45,10 @@ namespace Conditio.Models
                             "PC COMPONENTES Y MULTIMEDIA, S.L.U. , sociedad española, con NIF B73347494",
                             1),
                         CookiesPolicy = new KeyValuePair<string, int>(
-                            "http://mundo.pccomponentes.com/politica-de-cookies/",
+                            "Sesión - Persistentes - Propias - Terceros - Análisis",
                             1),
                         DataProtection = new KeyValuePair<string, int>(
-                            "https://www.pccomponentes.com/privacidad",
+                            "Calificación general superior a la media",
                             1)
                     },
                     new TermsModel()
@@ -135,34 +135,34 @@ namespace Conditio.Models
                         Key = "General",
                         Name = "General",
                         Price = new KeyValuePair<string, int>(
-                            "Si el precio del producto ha variado, no se reembolsará la diferencia. 'Precio Prometido´ es nuestro compromiso contigo por el que si ves un artículo de marca (no de ASOS) más barato en otra página, igualaremos el precio. ",
+                            "Igualamiento de precios a productos mas baratos",
                             1),
                         Delivery = new KeyValuePair<string, int>(
-                            "Envio estandar: 4,95. Gratis si gastas más de 24,99. Envío \"Siguiente día laborable\": 9,95. Entrega a tu medida: 9,95. Estandar punto de recogida: 3,95. Al día siguiente punto de recogida: 9,95. Envío estandar gratis si gastas más de 24,99,; para el resto de envíos gratis si gastas más de 120. Opción de Envío Premier por solo 29,99 año.",
+                            "Gratis - 9,95",
                             2),
                         Refund = new KeyValuePair<string, int>(
-                            "El plazo de devolución son de hasta 28 días después de haberlo recibido. Rellena la hoja de devoluciones y elige la opción que más te convenga. Devolución gratis mediante Corres. Devolución gratis mediatne Mondial Relay.   Tanto los productos como su embaje deben devolverse en estado orginal, incluidas las etiquetas. Las devoluciones tardan 15 días en tramitarse, y el rembolso suele tardar entre 5 y 10 días laborables adicionales. ",
+                            "Hasta 28 días después de haberlo recibido",
                             1),
                         Cancelation = new KeyValuePair<string, int>(
-                            "No realizamos cambios, deberás hacer una devolución y realizar un nuevo pedido.",
+                            "No se realizan, se debe hacer una devolución y realizar un nuevo pedido.",
                             2),
                         Guarantee = new KeyValuePair<string, int>(
-                            "No hay garantía, en principio. En caso de que recibas un producto defectuoso, procederemos según corresponda a tramitar su reparación, sustitución, rebaja del precio o resolución del contrato. También responderemos de las faltas de conformidad que nos manifiestes en un plazo de dos años desde la entrega.",
+                            "No hay garantía",
                             3),
                         Jurisdiction = new KeyValuePair<string, int>(
-                            "No específicada, según legislación general de consumidores. ",
+                            "No específicada, según legislación general de consumidores.",
                             4),
                         ApplicableLaw = new KeyValuePair<string, int>(
-                            "Ley 3/2014  Ley General para la Defensa de Consumidores y Usuarios;  Ley 34/2002 de 11 de Julio “Ley de Servicios de  la Sociedad de la Información y del Comercio Electrónico",
+                            "Ley 3/2014  Ley General para la Defensa de Consumidores y Usuarios;",
                             1),
                         Responsibility = new KeyValuePair<string, int>(
-                            "omos ASOS.com Limited (número de compañía 3584121), una compañía registrada en Inglaterra y Gales.",
+                            "ASOS.com Limited (número de compañía 3584121), una compañía registrada en Inglaterra y Gales.",
                             3),
                         CookiesPolicy = new KeyValuePair<string, int>(
-                            "https://www.asos.com/es/privacidad/",
+                            "Funcionales - Analíticas - Preferencias - Publicitarias",
                             1),
                         DataProtection = new KeyValuePair<string, int>(
-                            "https://www.asos.com/es/descubre/marketing-terms-and-conditions/privacy-policy-cookies/",
+                            "Calificación general en torno a la media",
                             2)
                     },
                     new TermsModel()
