@@ -174,3 +174,46 @@ d
         text-align: right;
         margin-right: 12px;
     }
+
+.tracking-content {
+
+}
+
+.tracking-section-header {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.tracking-section-header li {
+    float: left;
+}
+
+.tracking-section-content {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.tracking-section-content li {
+    float: left;
+}
+
+.about-image {
+    border-radius: 100%;
+    width: 240px;
+    height: 240px;
+}
+
+.about-section {
+    text-align: center;
+}
+
+.about-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.about-description{
+
+}
