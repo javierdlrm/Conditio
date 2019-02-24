@@ -60,8 +60,8 @@ d
 
 .comparator-details-key {
     display: inline-block;
-    width: 50%;
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 6px;
 }
 
 .comparator-details-value {
@@ -70,6 +70,7 @@ d
     width: 46%;
     text-align: right;
     font-weight: bold;
+    margin-right: 6px;
 }
 
 .comparator-details-header {
@@ -87,6 +88,7 @@ d
     padding-right: 12px;
     padding-bottom: 5px;
     margin: 15px 0;
+    height: 200px;
 }
 
 .comparator-details-value-1 {
@@ -176,27 +178,25 @@ d
     }
 
 .tracking-content {
-
+    margin-bottom: 20px;
 }
 
 .tracking-section-header {
-    padding-left: 0;
-    margin-left: -5px;
-    list-style: none;
-}
-
-.tracking-section-header li {
-    float: left;
+    font-weight: bold;   
 }
 
 .tracking-section-content {
     padding-left: 0;
     margin-left: -5px;
     list-style: none;
+    font-size: 20px;
 }
-
-.tracking-section-content li {
-    float: left;
+.tracking-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: lightblue;
 }
 
 .about-image {
@@ -216,4 +216,26 @@ d
 
 .about-description{
 
+}
+
+.dot {
+    height: 14px;
+    width: 14px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.dot-value-1 {
+    background-color: green;
+}
+.dot-value-2 {
+    background-color: #e4e43f;
+}
+.dot-value-3 {
+    background-color: #de9d25;
+}
+.dot-value-4 {
+    background-color: #c93535;
 }
