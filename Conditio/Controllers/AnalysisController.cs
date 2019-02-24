@@ -12,6 +12,11 @@ namespace Conditio.Controllers
         public IActionResult Analysis(string url)
         {
             var model = GetTestViewModel(url);
+
+            var backup = new AnalysisViewModel();
+
+            var terms = backup.TermsDictionary.ContainsKey(url) ? backup.TermsDictionary.GetValueOrDefault(url).First(x => x.Key == "General") : backup.TermsDictionary.First().Value.First(x => x.Key == "General");
+            model.Terms = terms;
             return View(model);
         }
 
@@ -24,10 +29,15 @@ namespace Conditio.Controllers
         {
             return View();
         }
-        
+
         [HttpPost, ValidateAntiForgeryToken]
-        public IActionResult Compare(string url_one, string url_two, string url_three)
+        public IActionResult Compare(ComparatorViewModel urls)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Comparator", urls);
+            }
+
             ViewData["result"] = true;
 
             var model = new ComparatorViewModel()

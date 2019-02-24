@@ -9,6 +9,8 @@ namespace Conditio.Models
     {
         public string Url { get; set; }
 
+        public TermsModel Terms { get; set; }
+
         public Dictionary<string, List<TermsModel>> TermsDictionary { get; set; } = new Dictionary<string, List<TermsModel>>()
         {
             {

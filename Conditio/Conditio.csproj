@@ -11,9 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Views\Analysis\AnalysisDetails.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
     <Content Update="Views\Analysis\Analysis.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

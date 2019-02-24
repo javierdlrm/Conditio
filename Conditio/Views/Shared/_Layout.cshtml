@@ -20,6 +20,7 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link href="https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro:300|Roboto:500" rel="stylesheet">
     </environment>
 </head>
 <body>
@@ -36,16 +37,16 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")"><a asp-controller="Home" asp-action="Index">Inicio</a></li>
 
                     @if (SignInManager.IsSignedIn(User))
                     {
-                        <li><a asp-area="" asp-controller="Analysis" asp-action="Comparator">Comparator</a></li>
-                        <li><a asp-area="" asp-controller="Analysis" asp-action="TrackingAlerts">Tracking & Alerts</a></li>
+                        <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Comparator" ? "active" : "")"><a asp-controller="Analysis" asp-action="Comparator">Comparador</a></li>
+                        <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "TrackingAlerts" ? "active" : "")"><a asp-controller="Analysis" asp-action="TrackingAlerts">Seguimiento</a></li>
                     }
 
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "About" ? "active" : "")"><a asp-controller="Home" asp-action="About">Nosotros</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Contact" ? "active" : "")"><a asp-controller="Home" asp-action="Contact">Contacto</a></li>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>

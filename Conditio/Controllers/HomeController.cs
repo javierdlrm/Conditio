@@ -41,11 +41,11 @@ namespace Conditio.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public IActionResult InsertUrl(UrlModel model)
+        public IActionResult InsertUrl(HomeViewModel model)
         {
             if (!ModelState.IsValid)
             {
-                return View(model);
+                return View("Index", model);
             }
 
             return RedirectToAction("Analysis", "Analysis", new { url = model.Url });

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Conditio.Models.HomeViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -12,11 +14,18 @@
         </p>
     </div>
     <div class="col-md-12">
-        <form asp-controller="Home" asp-action="InsertUrl" method="post">
-            <h5>Choose any platform</h5>    
+        <form asp-controller="Home" asp-action="InsertUrl" method="post" class="analyse-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="analyse-title">Elige cualquier plataforma</h5>
+                </div>
+                <div class="col-md-6">
+                    @Html.ValidationSummary()
+                </div>
+            </div>
             <div class="form-group">
-                @Html.TextBox("url", "", new { @class = "form-control" })
-                <button type="submit" class="btn btn-primary">Analyse</button>
+                @Html.TextBox("Url", "", new { @class = "form-control analyse-input", @placeholder = "Url" })
+                <button type="submit" class="btn btn-primary analyse-button">Analizar</button>
             </div>
         </form>
     </div>

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Conditio.Models
 {
-    public class UrlModel
+    public class HomeViewModel
     {
-        [Required]
+        [Required(ErrorMessage ="This fields is required")]
         public string Url { get; set; }
     }
 }

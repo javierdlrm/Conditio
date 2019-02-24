@@ -2,21 +2,105 @@
 
 @{
     ViewData["Title"] = "Test Page";
-
-    var terms = Model.TermsDictionary.GetValueOrDefault(Model.Url);
 }
 
 <div class="row">
     <div class="col-md-12">
-        <h2 class="home-title">@Model.Url</h2>
+        <h2 class="page-title">@Model.Url</h2>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4 tile"></div>
-    <div class="col-md-4 tile"></div>
-    <div class="col-md-4 tile"></div>
-    <div class="col-md-4 tile"></div>
-    <div class="col-md-4 tile"></div>
-    <div class="col-md-4 tile"></div>
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-4">
+            <div class=" comparator-details-group comparator-details-border-@Model.Terms.Delivery.Value">
+                <h4 class="comparator-details-header">Precio</h4>
+                <div>
+                    <p class="comparator-details-key">@Model.Terms.Price.Key</p>
+                    <p class="comparator-details-value comparator-details-value-@Model.Terms.Price.Value">@Model.Terms.Price.Value</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class=" comparator-details-group comparator-details-border-@Model.Terms.Delivery.Value">
+                <h4 class="comparator-details-header">Entrega</h4>
+                    <div>
+                        <p class="comparator-details-key">@Model.Terms.Delivery.Key</p>
+                        <p class="comparator-details-value comparator-details-value-@Model.Terms.Delivery.Value">@Model.Terms.Delivery.Value</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class=" comparator-details-group comparator-details-border-@Model.Terms.Delivery.Value">
+                <h4 class="comparator-details-header">Devolución</h4>
+                    <div>
+                        <p class="comparator-details-key">@Model.Terms.Refund.Key</p>
+                        <p class="comparator-details-value comparator-details-value-@Model.Terms.Refund.Value">@Model.Terms.Refund.Value</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-4">
+            <div class=" comparator-details-group comparator-details-border-@Model.Terms.Delivery.Value">
+                <h4 class="comparator-details-header">Cancelación</h4>
+                    <div>
+                        <p class="comparator-details-key">@Model.Terms.Cancelation.Key</p>
+                        <p class="comparator-details-value comparator-details-value-@Model.Terms.Cancelation.Value">@Model.Terms.Cancelation.Value</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class=" comparator-details-group comparator-details-border-@Model.Terms.Delivery.Value">
+                <h4 class="comparator-details-header">Garantia</h4>
+                    <div>
+                        <p class="comparator-details-key">@Model.Terms.Guarantee.Key</p>
+                        <p class="comparator-details-value comparator-details-value-@Model.Terms.Guarantee.Value">@Model.Terms.Guarantee.Value</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class=" comparator-details-group comparator-details-border-@Model.Terms.Delivery.Value">
+                <h4 class="comparator-details-header">Jurisdiccion</h4>
+                    <div>
+                        <p class="comparator-details-key">@Model.Terms.Jurisdiction.Key</p>
+                        <p class="comparator-details-value comparator-details-value-@Model.Terms.Jurisdiction.Value">@Model.Terms.Jurisdiction.Value</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-4">
+            <div class=" comparator-details-group comparator-details-border-@Model.Terms.Delivery.Value">
+                <h4 class="comparator-details-header">Proteccion de datos</h4>
+                    <div>
+                        <p class="comparator-details-key">@Model.Terms.DataProtection.Key</p>
+                        <p class="comparator-details-value comparator-details-value-@Model.Terms.DataProtection.Value">@Model.Terms.DataProtection.Value</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class=" comparator-details-group comparator-details-border-@Model.Terms.Delivery.Value">
+                <h4 class="comparator-details-header">Responsabilidad</h4>
+                    <div>
+                        <p class="comparator-details-key">@Model.Terms.Responsibility.Key</p>
+                        <p class="comparator-details-value comparator-details-value-@Model.Terms.Responsibility.Value">@Model.Terms.Responsibility.Value</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class=" comparator-details-group comparator-details-border-@Model.Terms.Delivery.Value">
+                <h4 class="comparator-details-header">Politica de cookies</h4>
+                    <div>
+                        <p class="comparator-details-key">@Model.Terms.CookiesPolicy.Key</p>
+                        <p class="comparator-details-value comparator-details-value-@Model.Terms.CookiesPolicy.Value">@Model.Terms.CookiesPolicy.Value</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
 </div>

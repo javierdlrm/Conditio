@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,6 +8,9 @@ namespace Conditio.Models
 {
     public class ComparatorViewModel
     {
+        [Required(ErrorMessage = "The url is required")]
+        public string UrlOne { get; set; }
+        
         public List<KeyValuePair<string, int>> Price { get; set; }
         public List<KeyValuePair<string, int>> Delivery { get; set; }
         public List<KeyValuePair<string, int>> Refund { get; set; }
